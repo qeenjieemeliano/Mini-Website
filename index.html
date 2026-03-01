@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Mini Website | BSIT Student</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">Qenjie<span>.dev</span></div>
+    <nav>
+      <button class="nav-btn active" onclick="showPage('home', this)">Home</button>
+      <button class="nav-btn" onclick="showPage('about', this)">About</button>
+      <button class="nav-btn" onclick="showPage('contact', this)">Contact</button>
+    </nav>
+  </header>
+
+  <section id="home" class="page active">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <span class="tag"> Hello, World!</span>
+        <h1>I'm <br/><span class="highlight">Qenjie</span></h1>
+        <p class="subtitle">1st Year BSIT Student • Aspiring Web Developer</p>
+        <p class="desc">Welcome to my little corner of the internet. I'm just starting my journey in IT.</p>
+      </div>
+      <div class="hero-media">
+
+        <div class="media-card img-card">
+          <div class="media-label"> My Photo</div>
+          <div class="placeholder-img">
+            <span class="avatar-icon"></span>
+            <img src="/Web/image/Messenger_creation_7287430052065428285.jpeg" width="250" />
+          
+          </div>
+          <p>View my project on GitHub:</p>
+<a href="https://github.com/qeenjieemeliano" target="_blank">
+  My Github Account
+</a>
+        </div>
+
+        <div class="media-card audio-card">
+          <div class="media-label"> Audio — About This Page</div>
+          <audio controls class="styled-audio">
+            <source src="/Web/Audio/VID_20260301_172633.mp4" type="audio/mpeg"/>
+
+          </audio>
+        </div>
+
+
+        <div class="media-card video-card">
+          <div class="media-label"> Video — The Activity Before</div>
+          <p class="media-hint">Embed or upload a video of the activity before:</p>
+          <div class="video-wrap">
+            <video controls width="100%">
+              <source src="/Web/video/lv_0_20260215145510.mp4" type="video/mp4"/>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="page">
+    <div class="page-header">
+      <span class="tag">Get to know me</span>
+      <h2>About <span class="highlight">Me</span></h2>
+      <p class="subtitle">Hobbies, interests & a bit of sci-fi</p>
+    </div>
+
+    <div class="cards-row">
+  
+      <div class="media-card img-card">
+        <div class="media-label"> My Hobby</div>
+        <div class="placeholder-img hobby">
+        <img src="/Web/image/received_1225764178972515.jpeg" width="250" />
+        </div>
+        <p class="caption">I love <strong>Basketball</strong> — it's how I unwind after long coding sessions. It also sparked my interest in sports!</p>
+      </div>
+
+      <div class="media-card audio-card">
+        <div class="media-label"> Audio — About This Page</div>
+        <audio controls class="styled-audio">
+          <source src="/Web/Audio/VID_20260301_173413.mp4" type="audio/mpeg"/>
+          Your browser does not support audio.
+        </audio>
+      </div>
+
+      <div class="media-card video-card">
+        <div class="media-label"> Video — Favorite Sci-fi Movie
+        </div>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/zSWdZVtXT7E"
+            title="Sci-fi Movie"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="page">
+    <div class="page-header">
+      <span class="tag"> Let's connect</span>
+      <h2>Contact <span class="highlight">Me</span></h2>
+      <p class="subtitle">My favorite place & how to reach me</p>
+    </div>
+
+    <div class="cards-row">
+      <div class="media-card img-card">
+        <div class="media-label">
+        Favorite Place</div>
+        <div class="placeholder-img fav-place">
+              <img src="/Web/image/received_24155335660735621.jpeg" width="250">
+  
+        </div>
+        <p class="caption">San Remigio is my happy place — the white sand and clear water just hits different after a stressful week of coding!</p>
+      </div>
+
+      <div class="media-card audio-card">
+        <div class="media-label"> Audio — About This Page</div>
+        <audio controls class="styled-audio">
+          <source src="/Web/Audio/VID_20260301_175709.mp4" type="audio/mpeg"/>
+      </div>
+
+      <div class="media-card video-card wide">
+        <div class="media-label"> Video — Life of an IT Student</div>
+        <div class="video-wrap">
+          <video controls width="100%">
+            <source src="/Web/video/Messenger_creation_C7E1CB0B-6E81-41B3-9EA7-8249BF09C6C0.mp4" type="video/mp4"/>
+          </video>
+
+        </div>
+      </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>Made with by <strong>Qenjie</strong> | 1st Year BSIT</p>
+    <p class="footer-tech">HTML • CSS • Passion</p>
+  </footer>
+
+  <script>
+    function showPage(pageId, btn) {
+      
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+  </html>
